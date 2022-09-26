@@ -20,12 +20,20 @@ public class GameOverScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void playAgain()
+    public void MainMenu()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("mainmenu");
         click = GetComponent<AudioSource>();
         click.clip = Resources.Load<AudioClip>("click");
         click.Play();
 
+    }
+
+    public void Quit(){
+        click = GetComponent<AudioSource>();
+        click.clip = Resources.Load<AudioClip>("click");
+        click.Play();
+        Application.Quit();
+        Debug.Log("Quit Game");
     }
 }

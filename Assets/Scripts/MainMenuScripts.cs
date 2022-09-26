@@ -36,8 +36,8 @@ public AudioSource click;
    click = GetComponent<AudioSource>();
    click.clip = Resources.Load<AudioClip>("click");
    click.Play();
-    Application.Quit();
-    Debug.Log("Quit Game");
+   Application.Quit();
+   Debug.Log("Quit Game");
   
  }
 }

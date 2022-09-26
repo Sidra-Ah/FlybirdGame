@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,9 @@ public class playerController : MonoBehaviour
     private int Points = 0;
     // public Text Score;
     public TextMeshPro Score;
+    private int Coins = 0;
+    public TextMeshPro gainCoin;
+    public AudioSource coinplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,8 @@ public class playerController : MonoBehaviour
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("GameOver");
         PlayerPrefs.SetInt("highScore",Points);
+
+        
     }
 
    private void OnTriggerEnter2D(Collider2D collusion) {
@@ -50,6 +56,17 @@ public class playerController : MonoBehaviour
         {
             Points++;
             Score.text = Points.ToString("00");
+        }
+
+        else if(collusion.gameObject.tag == "coins")
+        {
+            coinplay = GetComponent<AudioSource>();
+            coinplay.clip = Resources.Load<AudioClip>("coin");
+            coinplay.Play();
+            Coins++;
+            gainCoin.text = Coins.ToString();
+            // Debug.Log("you got coin");
+            Destroy(collusion.gameObject);
         }
     }
   

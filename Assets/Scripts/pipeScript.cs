@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class pipeScript : MonoBehaviour
 {
-    public float speed;
+    public float pipespeed;
+    public float coinspeed;
+
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,8 @@ public class pipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * speed);
+        transform.Translate(Vector2.left * pipespeed);
+        transform.Translate(Vector2.left * coinspeed);
     //    rb.velocity = Vector2.left * speed;
     }
 
