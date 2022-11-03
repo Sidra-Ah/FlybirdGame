@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "561715247908",
+    "firebase_url": "https://fly-bird-cedff-default-rtdb.firebaseio.com",
+    "project_id": "fly-bird-cedff",
+    "storage_bucket": "fly-bird-cedff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561715247908:android:7a1b48f86ff7800306d1b1",
+        "android_client_info": {
+          "package_name": "com.sidra.flyingbird"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561715247908-9bag30v81jhsor0va6f4hsqvphsmhbr5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_2naeeYu3HIHAuHczenY8eAStEmVasJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561715247908-9bag30v81jhsor0va6f4hsqvphsmhbr5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
